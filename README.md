@@ -23,4 +23,4 @@ python main.py \
 --model_name=<model name> \
 --task_name=<conditioned_classification/unconditioned_classification> \
 --logdir=experiments/<folder for tensorboard> \
---source_dir=<path to holstep dataset>
+--source_dir=path to holstep dataset
