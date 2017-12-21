@@ -22,5 +22,5 @@ Download the holstep data set from here: http://cl-informatik.uibk.ac.at/cek/hol
 python main.py \
 --model_name=<model name> \
 --task_name=<conditioned_classification/unconditioned_classification> \
---logdir=experiments/<folder for tensorboard> \
---source_dir=path to holstep dataset
+--logdir=experiments\/<folder for tensorboard> \
+--source_dir=<path to holstep dataset>
