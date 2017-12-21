@@ -1,22 +1,26 @@
-# HolStep baselines
+CSE 505 Project
 
-This is the code used for the baseline models described in the paper ["HolStep: a Machine Learning Dataset for Higher-Order Logic Theorem Proving"](http://cl-informatik.uibk.ac.at/cek/holstep/ckfccs-holstep-submitted.pdf).
-These models are very basic and unoptimized, and we expect it should be easy to improve upon them.
+This is the course project for the course CSE 505, Fall 2017.
 
-The HolStep dataset may be download [here](http://cl-informatik.uibk.ac.at/cek/holstep/).
+DeepMath - Deep Sequence Models for Premise Selection
 
+Original Code From: https://github.com/girving/deepmath/tree/master/holstep_baselines
 
-## Usage
+My Contributions:
 
-After having downloaded the dataset to e.g. `~/Downloads/holstep`, run `main.py`:
+1. Unconditional 1D CNN-RNN
+2. Conditional 1D CNN-RNN
+3. Unconditional 1D CNN-GRU
+4. Conditional 1D CNN-GRU
+5. Unconditional 1D CNN-Encoder Decoder
+6. Conditional 1D CNN-Encoder Decoder
 
-```sh
+Execution Steps:
+
+Download the holstep data set from here: http://cl-informatik.uibk.ac.at/cek/holstep/
+
 python main.py \
---model_name=cnn_2x_siamese \
---task_name=conditioned_classification \
---logdir=experiments/cnn_2x_siamese_experiment \
---source_dir=/Users/fchollet/Downloads/holstep
-```
-
-`model_name` is the name of a model (see which models are available in `conditioned_classification_models.py` and `unconditioned_classification_models.py`).
-`task_name` may be either `conditioned_classification` or `unconditioned_classification`.
+--model_name=<model name> \
+--task_name=<conditioned_classification/unconditioned_classification> \
+--logdir=experiments/<folder for tensorboard> \
+--source_dir=<path to holstep dataset>
